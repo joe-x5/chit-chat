@@ -274,9 +274,12 @@ button:hover {
   border: 2px solid #007bff;  
 }  
 
-#softKeysContainer {  
-  
-  
+#softKeysContainer {   
+  width: 100%;  
+  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
+  position: fixed;  
+  bottom: 0;  
+  display: none;  
 }  
 
 #softKeysContainer.active {  
@@ -286,15 +289,18 @@ button:hover {
 #softkey-left,  
 #softkey-center,  
 #softkey-right {  
-  
+  font-size: 15px;  
+  color: #ffffff;  
 }  
 
 #softkey-left {  
-  
+  float: left;  
+  margin-left: 10px;  
 }  
 
 #softkey-right {  
-  
+  float: right;  
+  margin-right: 10px;  
 }  
 
 .message img {  

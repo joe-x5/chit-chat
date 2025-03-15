@@ -26,7 +26,7 @@ body {
 }  
 
 header {  
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   color: white;  
   text-align: center;  
   padding: 8px;  
@@ -41,7 +41,7 @@ header1 {
   font-size: 16px;
   font-weight: bold;
   padding: 12px 0;
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   color: white;
   text-align: center;
   position: fixed;
@@ -142,7 +142,7 @@ button:hover {
   font-size: 16px;  
   font-weight: bold;  
   padding: 8px;  
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   color: white;  
   text-align: center;  
   position: sticky;  
@@ -273,13 +273,8 @@ button:hover {
 }  
 
 #softKeysContainer {  
-  height: 1.1rem;  
-  line-height: 1.1rem;  
-  width: 100%;  
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
-  position: fixed;  
-  bottom: 0;  
-  display: none;  
+  
+  
 }  
 
 #softKeysContainer.active {  
@@ -289,23 +284,20 @@ button:hover {
 #softkey-left,  
 #softkey-center,  
 #softkey-right {  
-  font-size: 15px;  
-  color: #ffffff;  
+  
 }  
 
 #softkey-left {  
-  float: left;  
-  margin-left: 10px;  
+  
 }  
 
 #softkey-right {  
-  float: right;  
-  margin-right: 10px;  
+  
 }  
 
 .message img {  
   max-width: 100%;  
-  height: 120px;  
+  height: 100%;  
   border-radius: 6px;  
   margin-top: 4px;  
 }  
@@ -320,7 +312,7 @@ button:hover {
   position: absolute;  
   bottom: -40px;  
   right: 0;  
-  background: linear-gradient(45deg, #ffcc00, #ff66cc, #66ffcc);  
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   border: 1px solid #ccc;  
   border-radius: 6px;  
   padding: 4px;  
@@ -347,7 +339,7 @@ button:hover {
   position: absolute;  
   bottom: -80px;  
   right: 0;  
-  background: linear-gradient(45deg, #ff9966, #ff5e62, #ffcc99);  
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   border: 1px solid #ccc;  
   border-radius: 6px;  
   padding: 4px;  
@@ -477,7 +469,7 @@ button:hover {
 }  
 
 .custom-alert-header {  
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   color: white;  
   padding: 8px;  
   font-weight: bold;  
@@ -500,7 +492,7 @@ button:hover {
   position: fixed;
   top: 10%;
   left: 0%;
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);
+    background: linear-gradient(45deg, #1e90ff, #00bfff);  
   color: white;
   padding: 10px;
   border-radius: 6px;
@@ -519,7 +511,7 @@ button:hover {
 </head>
 <body>
   <div id="loginPage" class="active">
-    <header1>Chit Chat - Login</header1>
+    <header1>Login</header1>
     <div id="loginContainer">
       <input type="text" id="usernameInput" class="navItem" placeholder="Enter your name" tabindex="1" />
       <input type="password" id="passwordInput" class="navItem" placeholder="Enter your password" tabindex="2" />
@@ -528,15 +520,13 @@ button:hover {
   </div>
 
   <div id="mainPage">
-    <header>Private Chat</header>
+    <header>Chat MAX 🗨️</header>
     <input type="text" id="searchInput" class="navItem" placeholder="Search for a user" tabindex="1" />
     <button id="searchButton" class="navItem" tabindex="2">Search</button>
     <button id="worldChatButton" class="navItem" tabindex="3" onclick="navigateTo('world_chat.html')">World Chat</button>
     <button id="groupChatButton" class="navItem" tabindex="4" onclick="navigateTo('groups.html')">Group Chat</button>
-    <button id="changeBackgroundButton" class="navItem" tabindex="5">Change Chat Background</button>
-    <button id="changeThemeButton" class="navItem" tabindex="6">Change Theme</button>
     <div id="privateChatList">
-      <h4>Your Private Chats:</h4>
+      <h4>👇 Private Chats 👇</h4>
     </div>
   </div>
 
@@ -554,11 +544,11 @@ button:hover {
   <div id="softKeysContainer">
     <div id="softkey-left"></div>
     <div id="softkey-center"></div>
-    <div id="softkey-right">Back</div>
+    <div id="softkey-right"></div>
   </div>
 
   <!-- Custom Notification Container -->
-  <div id="notificationContainer" class="custom-notification"></div>
+  
 
   <!-- Dropdown Menu Container -->
   <div id="dropdownMenu" class="dropdown-menu"></div>

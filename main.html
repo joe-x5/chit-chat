@@ -26,7 +26,7 @@ body {
 }  
 
 header {  
-    background: linear-gradient(45deg, #1e90ff, #00bfff);  
+    background-color: #0084ff;
   color: white;  
   text-align: center;  
   padding: 8px;  
@@ -41,7 +41,7 @@ header1 {
   font-size: 16px;
   font-weight: bold;
   padding: 12px 0;
-    background: linear-gradient(45deg, #1e90ff, #00bfff);  
+    background-color: #0084ff;  
   color: white;
   text-align: center;
   position: fixed;
@@ -189,7 +189,7 @@ button:hover {
 }  
 
 .sent {  
-  background: linear-gradient(45deg, #1e90ff, #00bfff);  
+  background-color: #0084ff;  
   color: white;  
 }  
 
@@ -276,7 +276,7 @@ button:hover {
 
 #softKeysContainer {   
   width: 100%;  
-  background: linear-gradient(45deg, #ff6f61, #ff9a8b);  
+  background-color: #0084ff;
   position: fixed;  
   bottom: 0;  
   display: none;  
@@ -477,7 +477,7 @@ button:hover {
 }  
 
 .custom-alert-header {  
-    background: linear-gradient(45deg, #1e90ff, #00bfff);  
+    background-color: #0084ff;
   color: white;  
   padding: 8px;  
   font-weight: bold;  
@@ -808,9 +808,9 @@ button:hover {
 
     function showKaiAd() {
       getKaiAd({
-        publisher: 'da08737d-861e-4ebe-bbbb-8fb90d004d39',
-        app: 'Chit_Chat',
-        slot: 'Chit_Chat__slot',
+        publisher: '58d21092-87f8-47c3-883d-fcd67eb318d8',
+        app: '10',
+        slot: '10',
         onerror: function(err) { console.error('Custom catch:', err); },
         onready: function(ad) {
           var previouslyFocusedElement = document.activeElement;
@@ -1897,5 +1897,228 @@ button:hover {
       if (e.key === "2") chatBox.scrollTop -= 50;
     });
   </script>
+
+     
+    <script>
+        getKaiAd({
+	publisher: '58d21092-87f8-47c3-883d-fcd67eb318d8',
+	app: 'OliveWeb Messenger X',
+	onerror: err => console.error('Custom catch:', err),
+	onready: ad => {
+		// Ad is ready to be displayed
+		// calling 'display' will display the ad
+		ad.call('display')
+	}
+})
+    </script>
+    
+
+ <script>
+        getKaiAd({
+	publisher: '58d21092-87f8-47c3-883d-fcd67eb318d8',
+	app: 'OliveWeb Messenger X',
+	onerror: err => console.error('Custom catch:', err),
+	onready: ad => {
+		// Ad is ready to be displayed
+		// calling 'display' will display the ad
+		ad.call('display')
+	}
+})
+    </script>
+    
+      
+  <script>
+        getKaiAd({
+	publisher: '72183fd2-d463-4969-9659-99e78130751d',
+	app: '10',
+	onerror: err => console.error('Custom catch:', err),
+	onready: ad => {
+		// Ad is ready to be displayed
+		// calling 'display' will display the ad
+		ad.call('display')
+	}
+})
+    </script>
+
+
+  <script>
+        getKaiAd({
+	publisher: '72183fd2-d463-4969-9659-99e78130751d',
+	app: '10',
+	onerror: err => console.error('Custom catch:', err),
+	onready: ad => {
+		// Ad is ready to be displayed
+		// calling 'display' will display the ad
+		ad.call('display')
+	}
+})
+    </script>
+
+  <script>
+document.addEventListener("keydown", function (event) {
+    if (event.repeat) return; // Avoid multiple triggers
+
+    // Track long press state
+    const longPressTimeout = 5000; // 5 seconds
+    let longPressTimer;
+
+    // Refresh Page (Long Press 1)
+    if (event.key === "1") {
+        longPressTimer = setTimeout(() => {
+            alert("🔄 Refreshing Page...");
+            location.reload(); // Refresh the page
+        }, longPressTimeout);
+    }
+
+    // Enable/Disable Mouse Cursor (Long Press 0)
+    if (event.key === "0") {
+        longPressTimer = setTimeout(() => {
+            const body = document.body;
+            if (body.style.cursor === "none") {
+                body.style.cursor = "default";
+                alert("🖱️ Mouse Cursor Enabled");
+            } else {
+                body.style.cursor = "none";
+                alert("🖱️ Mouse Cursor Disabled");
+            }
+        }, longPressTimeout);
+    }
+
+    // Toggle Fullscreen Mode (Long Press #)
+    if (event.key === "#") {
+        longPressTimer = setTimeout(() => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+                alert("📺 Fullscreen Mode Enabled");
+            } else {
+                document.exitFullscreen();
+                alert("📺 Fullscreen Mode Disabled");
+            }
+        }, longPressTimeout);
+    }
+
+    // Exit App (Long Press *)
+    if (event.key === "*") {
+        longPressTimer = setTimeout(() => {
+            alert("🚪 Exiting App...");
+            window.close(); // Attempts to close the app (may not work in some environments)
+        }, longPressTimeout);
+    }
+
+    // Cancel long press on key release
+    document.addEventListener("keyup", function () {
+        clearTimeout(longPressTimer);
+    });
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "SoftRight") {
+    showExitPrompt();
+  } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    toggleSelection();
+  } else if (event.key === "Enter") {
+    confirmExit();
+  }
+});
+
+let exitPrompt = null;
+let selectedButton = "no"; // Default selection
+
+function showExitPrompt() {
+  if (exitPrompt) return; // Prevent multiple prompts
+
+  exitPrompt = document.createElement("div");
+  Object.assign(exitPrompt.style, {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    background: "black",
+    color: "white",
+    padding: "20px",
+    textAlign: "center",
+    borderRadius: "10px",
+    zIndex: "1000",
+    width: "220px",
+    boxShadow: "0 0 10px rgba(255,255,255,0.3)"
+  });
+
+  let title = document.createElement("p");
+  title.textContent = "Do you want to exit?";
+  Object.assign(title.style, {
+    fontSize: "18px",
+    marginBottom: "15px",
+    fontWeight: "bold"
+  });
+  exitPrompt.appendChild(title);
+
+  let buttonContainer = document.createElement("div");
+  Object.assign(buttonContainer.style, {
+    display: "flex",
+    justifyContent: "space-between"
+  });
+
+  let yesBtn = document.createElement("p");
+  yesBtn.textContent = "✔ Yes";
+  Object.assign(yesBtn.style, buttonStyle(false));
+  yesBtn.id = "yesBtn";
+  buttonContainer.appendChild(yesBtn);
+
+  let noBtn = document.createElement("p");
+  noBtn.textContent = "✖ No";
+  Object.assign(noBtn.style, buttonStyle(true));
+  noBtn.id = "noBtn";
+  buttonContainer.appendChild(noBtn);
+
+  exitPrompt.appendChild(buttonContainer);
+  document.body.appendChild(exitPrompt);
+}
+
+function buttonStyle(selected) {
+  return {
+    padding: "10px 15px",
+    borderRadius: "8px",
+    cursor: "pointer",
+    flex: "1",
+    textAlign: "center",
+    margin: "5px",
+    fontSize: "16px",
+    fontWeight: "bold",
+    background: selected ? "yellow" : "gray",
+    color: selected ? "black" : "white",
+  };
+}
+
+function toggleSelection() {
+  if (!exitPrompt) return;
+
+  let yesBtn = document.getElementById("yesBtn");
+  let noBtn = document.getElementById("noBtn");
+
+  if (selectedButton === "no") {
+    selectedButton = "yes";
+    Object.assign(yesBtn.style, buttonStyle(true));
+    Object.assign(noBtn.style, buttonStyle(false));
+  } else {
+    selectedButton = "no";
+    Object.assign(yesBtn.style, buttonStyle(false));
+    Object.assign(noBtn.style, buttonStyle(true));
+  }
+}
+
+function confirmExit() {
+  if (!exitPrompt) return;
+
+  if (selectedButton === "yes") {
+    window.close(); // Attempts to close the app
+  } else {
+    exitPrompt.remove();
+    exitPrompt = null;
+  }
+}
+</script>
+
+  
+  
 </body>
 </html>
